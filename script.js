@@ -30,102 +30,137 @@ currentDay.text(weekday[getDay] + ", " + months[getMonth] + " " + getDate + ", "
 
 // Compares 9AM timeblock to current hour
 if (+nineAm < getHours) {
-    $("#textarea0").addClass("past");
+    $("#textarea1").addClass("past");
 }
 else if (+nineAm == getHours) {
-     $("#textarea0").addClass("present");
+     $("#textarea1").addClass("present");
 }
 else if (+nineAm > getHours) {
-     $("#textarea0").addClass("future");
+     $("#textarea1").addClass("future");
 }
 
 // Compares 10AM timeblock to current hour
 if (+tenAm < getHours) {
-    $("#textarea1").addClass("past");
+    $("#textarea2").addClass("past");
 }
 else if (+tenAm == getHours) {
-     $("#textarea1").addClass("present");
+     $("#textarea2").addClass("present");
 }
 else if (+tenAm > getHours) {
-     $("#textarea1").addClass("future");
+     $("#textarea2").addClass("future");
 }
 
 // Compares 11AM timeblock to current hour
 if (+elevenAm< getHours) {
-    $("#textarea2").addClass("past");
+    $("#textarea3").addClass("past");
 }
 else if (+elevenAm == getHours) {
-     $("#textarea2").addClass("present");
+     $("#textarea3").addClass("present");
 }
 else if (+elevenAm > getHours) {
-     $("#textarea2").addClass("future");
+     $("#textarea3").addClass("future");
 }
 
 // Compares 12PM timeblock to current hour
 if (+twelvePm < getHours) {
-    $("#textarea3").addClass("past");
+    $("#textarea4").addClass("past");
 }
 else if (+twelvePm == getHours) {
-     $("#textarea3").addClass("present");
+     $("#textarea4").addClass("present");
 }
 else if (+twelvePm > getHours) {
-     $("#textarea3").addClass("future");
+     $("#textarea4").addClass("future");
 }
 
 // Compares 1PM timeblock to current hour
 if (+onePm < getHours) {
-    $("#textarea4").addClass("past");
+    $("#textarea5").addClass("past");
 }
 else if (+onePm == getHours) {
-     $("#textarea4").addClass("present");
+     $("#textarea5").addClass("present");
 }
 else if (+onePm > getHours) {
-     $("#textarea4").addClass("future");
+     $("#textarea5").addClass("future");
 }
 
 // Compares 2PM timeblock to current hour
 if (+twoPm < getHours) {
-    $("#textarea5").addClass("past");
+    $("#textarea6").addClass("past");
 }
 else if (+twoPm == getHours) {
-     $("#textarea5").addClass("present");
+     $("#textarea6").addClass("present");
 }
 else if (+twoPm > getHours) {
-     $("#textarea5").addClass("future");
+     $("#textarea6").addClass("future");
 }
 
 // Compares 3PM timeblock to current hour
 if (+threePm < getHours) {
-    $("#textarea6").addClass("past");
+    $("#textarea7").addClass("past");
 }
 else if (+threePm == getHours) {
-     $("#textarea6").addClass("present");
+     $("#textarea7").addClass("present");
 }
 else if (+threePm > getHours) {
-     $("#textarea6").addClass("future");
+     $("#textarea7").addClass("future");
 }
 
 // Compares 4PM timeblock to current hour
 if (+fourPm < getHours) {
-    $("#textarea7").addClass("past");
+    $("#textarea8").addClass("past");
 }
 else if (+fourPm == getHours) {
-     $("#textarea7").addClass("present");
+     $("#textarea8").addClass("present");
 }
 else if (+fourPm > getHours) {
-     $("#textarea7").addClass("future");
+     $("#textarea8").addClass("future");
 }
 
 // Compares 5PM timeblock to current hour
 if (+fivePm < getHours) {
-    $("#textarea8").addClass("past");
+    $("#textarea9").addClass("past");
 }
 else if (+fivePm == getHours) {
-     $("#textarea8").addClass("present");
+     $("#textarea9").addClass("present");
 }
 else if (+fivePm > getHours) {
-     $("#textarea8").addClass("future");
+     $("#textarea9").addClass("future");
 }
 
-console.log(getHours);
-console.log(+nineAm);
+$("#button1").on("click", function(){
+     localStorage.setItem("textvalue1", $("#textarea1").val());
+});
+$("#button2").on("click", function(){
+     localStorage.setItem("textvalue2", $("#textarea2").val());
+});
+$("#button3").on("click", function(){
+     localStorage.setItem("textvalue3", $("#textarea3").val());
+});
+$("#button4").on("click", function(){
+     localStorage.setItem("textvalue4", $("#textarea4").val());
+});
+$("#button5").on("click", function(){
+     localStorage.setItem("textvalue5", $("#textarea5").val());
+});
+$("#button6").on("click", function(){
+     localStorage.setItem("textvalue6", $("#textarea6").val());
+});
+$("#button7").on("click", function(){
+     localStorage.setItem("textvalue7", $("#textarea7").val());
+});
+$("#button8").on("click", function(){
+     localStorage.setItem("textvalue8", $("#textarea8").val());
+});
+$("#button9").on("click", function(){
+     localStorage.setItem("textvalue9", $("#textarea9").val());
+});
+
+$("#textarea1").text(localStorage.getItem("textvalue1"));
+$("#textarea2").text(localStorage.getItem("textvalue2"));
+$("#textarea3").text(localStorage.getItem("textvalue3"));
+$("#textarea4").text(localStorage.getItem("textvalue4"));
+$("#textarea5").text(localStorage.getItem("textvalue5"));
+$("#textarea6").text(localStorage.getItem("textvalue6"));
+$("#textarea7").text(localStorage.getItem("textvalue7"));
+$("#textarea8").text(localStorage.getItem("textvalue8"));
+$("#textarea9").text(localStorage.getItem("textvalue9"));
